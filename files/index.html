@@ -1861,144 +1861,78 @@ section:not(.on-dark) .eyebrow{color:var(--clay);}
       <h2>Request a quote</h2>
       <p>Tell us what you're looking for and our export team will respond with pricing, availability and shipping options within one business day.</p>
     </div>
-<style>
-/* Contact Form Styling */
-.form-group {
-    margin-bottom: 20px;
-}
+<div class="inquiry-card">
 
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #1f2937;
-}
+    <h2>Request an Export Quote</h2>
+    <p>Tell us what you're looking for and our export team will respond within one business day.</p>
 
-.form-control {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 15px;
-    font-family: inherit;
-    background: #fff;
-    transition: all .3s ease;
-    box-sizing: border-box;
-}
+    <form action="https://api.yourdomain.com/api/submit_inquiry.php" method="POST">
 
-.form-control:focus {
-    outline: none;
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 3px rgba(13,110,253,.15);
-}
+        <div class="form-grid">
 
-textarea.form-control {
-    resize: vertical;
-    min-height: 130px;
-}
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" name="fullname" required>
+            </div>
 
-select.form-control {
-    cursor: pointer;
-}
+            <div class="form-group">
+                <label>Company Name *</label>
+                <input type="text" name="company" required>
+            </div>
 
-.btn {
-    display: inline-block;
-    padding: 14px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s;
-}
+            <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" name="email" required>
+            </div>
 
-.btn-primary {
-    width: 100%;
-    background: #0d6efd;
-    color: #fff;
-}
+            <div class="form-group">
+                <label>Phone / WhatsApp *</label>
+                <input type="tel" name="phone" placeholder="+234..." required>
+            </div>
 
-.btn-primary:hover {
-    background: #0b5ed7;
-    transform: translateY(-2px);
-}
+            <div class="form-group">
+                <label>Country *</label>
+                <input type="text" name="country" required>
+            </div>
 
-@media (max-width:768px){
+            <div class="form-group">
+                <label>Product *</label>
+                <select name="product" required>
+                    <option value="">Select Product</option>
+                    <option>Raw Cashew Nuts</option>
+                    <option>Sesame Seeds</option>
+                    <option>Ginger</option>
+                    <option>Shea Butter</option>
+                    <option>Hibiscus Flower</option>
+                    <option>Soybeans</option>
+                    <option>Other</option>
+                </select>
+            </div>
 
-.form-group{
-    margin-bottom:18px;
-}
+            <div class="form-group">
+                <label>Quantity Required *</label>
+                <input type="text" name="quantity" placeholder="e.g. 10 MT" required>
+            </div>
 
-.form-control{
-    padding:12px 14px;
-    font-size:14px;
-}
+            <div class="form-group">
+                <label>Preferred Shipping Port</label>
+                <input type="text" name="shipping_port">
+            </div>
 
-.btn-primary{
-    padding:13px;
-}
-}
-</style>
-   <div class="form-group">
-    <label>Full Name *</label>
-    <input type="text" name="fullname" class="form-control" required>
-</div>
+        </div>
 
-<div class="form-group">
-    <label>Company Name *</label>
-    <input type="text" name="company" class="form-control" required>
-</div>
+        <div class="form-group full-width">
+            <label>Your Message *</label>
+            <textarea name="message" rows="6" required></textarea>
+        </div>
 
-<div class="form-group">
-    <label>Email Address *</label>
-    <input type="email" name="email" class="form-control" required>
-</div>
+        <button type="submit" class="submit-btn">
+            SEND INQUIRY
+        </button>
 
-<div class="form-group">
-    <label>Phone / WhatsApp *</label>
-    <input type="tel" name="phone" class="form-control" placeholder="+234..." required>
-</div>
+    </form>
 
-<div class="form-group">
-    <label>Country *</label>
-    <input type="text" name="country" class="form-control" required>
-</div>
-
-<div class="form-group">
-    <label>Product Interested In *</label>
-    <select name="product" class="form-control" required>
-        <option value="">Select Product</option>
-        <option>Raw Cashew Nuts</option>
-        <option>Sesame Seeds</option>
-        <option>Ginger</option>
-        <option>Shea Butter</option>
-        <option>Hibiscus Flower</option>
-        <option>Soybeans</option>
-        <option>Other</option>
-    </select>
-</div>
-
-<div class="form-group">
-    <label>Quantity Required *</label>
-    <input type="text" name="quantity" class="form-control" placeholder="e.g. 10 MT" required>
-</div>
-
-<div class="form-group">
-    <label>Preferred Shipping Port (Optional)</label>
-    <input type="text" name="shipping_port" class="form-control">
-</div>
-
-<div class="form-group">
-    <label>Your Message *</label>
-    <textarea name="message" rows="5" class="form-control" required></textarea>
-</div>
-
-<button type="submit" class="btn btn-primary">
-    Send Inquiry
-</button>
-
-      <div class="reveal">
+</div>      <div class="reveal">
         <div class="contact-card">
           <h4>Export Office</h4>
           <dl class="spec-list">
