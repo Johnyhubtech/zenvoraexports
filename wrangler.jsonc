@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "zenvoraexports",
+  "compatibility_date": "2026-06-29",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "files"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
