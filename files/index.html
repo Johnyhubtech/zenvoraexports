@@ -1855,13 +1855,91 @@ section:not(.on-dark) .eyebrow{color:var(--clay);}
      CONTACT
      ============================================================ -->
 <section class="contact on-dark" id="contact">
-  <div class="container">
+  <div class="container">h
     <div class="section-head reveal">
       <div class="eyebrow">Export Inquiry</div>
       <h2>Request a quote</h2>
       <p>Tell us what you're looking for and our export team will respond with pricing, availability and shipping options within one business day.</p>
     </div>
+<style>
+/* Contact Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
 
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fff;
+    transition: all .3s ease;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13,110,253,.15);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 130px;
+}
+
+select.form-control {
+    cursor: pointer;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-primary {
+    width: 100%;
+    background: #0d6efd;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #0b5ed7;
+    transform: translateY(-2px);
+}
+
+@media (max-width:768px){
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-control{
+    padding:12px 14px;
+    font-size:14px;
+}
+
+.btn-primary{
+    padding:13px;
+}
+}
+</style>
    <div class="form-group">
     <label>Full Name *</label>
     <input type="text" name="fullname" class="form-control" required>
