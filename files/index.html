@@ -620,42 +620,93 @@ section:not(.on-dark) .eyebrow{color:var(--clay);}
 /* ============================================================
    CONTACT
    ============================================================ */
-.contact{background:var(--forest);}
-.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(40px,6vw,90px);margin-top:54px;}
-.field{margin-bottom:22px;}
-.field label{
-  display:block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
-  color:rgba(247,244,235,.6);margin-bottom:10px;
+.inquiry-card{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    background:#0d2d22;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.08);
 }
-.field input,.field select,.field textarea{
-  width:100%;background:transparent;border:1px solid var(--line);padding:14px 16px;color:var(--paper);
-  font-size:.95rem;font-family:'IBM Plex Sans',sans-serif;transition:border-color .3s var(--ease);
-}
-.field textarea{resize:vertical;min-height:120px;}
-.field input::placeholder,.field textarea::placeholder{color:rgba(247,244,235,.32);}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);}
-.field select option{background:var(--forest-2);color:var(--paper);}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 
-.form-msg{
-  margin-top:20px;padding:16px 20px;border:1px solid var(--gold);color:var(--gold-soft);
-  font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.04em;display:none;
+.inquiry-card h2{
+    color:#fff;
+    margin-bottom:10px;
 }
-.form-msg.show{display:block;}
 
-.contact-card{background:var(--forest-2);border:1px solid var(--line);padding:clamp(28px,4vw,42px);}
-.contact-card h4{color:var(--paper);font-size:1.05rem;margin-bottom:24px;}
-.contact-card .spec-list{margin-bottom:28px;}
-.whatsapp-btn{
-  display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:17px;
-  background:#3CA876;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.14em;
-  text-transform:uppercase;transition:all .3s var(--ease);
+.inquiry-card p{
+    color:#c8d1cb;
+    margin-bottom:35px;
 }
-.whatsapp-btn:hover{background:#34965f;transform:translateY(-2px);}
-.whatsapp-btn svg{width:20px;height:20px;}
-.contact-note{margin-top:18px;font-size:.8rem;color:rgba(247,244,235,.5);}
 
-/* ============================================================
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    color:#fff;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:14px 16px;
+    border:none;
+    border-radius:8px;
+    font-size:15px;
+    background:#fff;
+    box-sizing:border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    outline:none;
+    box-shadow:0 0 0 3px rgba(201,164,74,.35);
+}
+
+.full-width{
+    margin-top:22px;
+}
+
+.submit-btn{
+    margin-top:30px;
+    background:#c9a44a;
+    color:#111;
+    border:none;
+    padding:15px 45px;
+    font-weight:700;
+    letter-spacing:2px;
+    cursor:pointer;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    background:#d8b55f;
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+.form-grid{
+    grid-template-columns:1fr;
+}
+
+.inquiry-card{
+    padding:25px;
+}
+}/* ============================================================
    FOOTER
    ============================================================ */
 .footer{background:var(--ink);color:rgba(247,244,235,.7);}
